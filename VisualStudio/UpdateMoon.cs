@@ -55,7 +55,7 @@ internal sealed class UpdateMoon : MonoBehaviour
 
         lastPhaseTextureIndex = phaseTextureIndex;
         //material.mainTexture = MoonPhaseTextures[lastPhaseTextureIndex];
-        material.mainTexture = Implementation.GetMoonPhaseTexture(lastPhaseTextureIndex);
+        material.mainTexture = BetterNightSkyMelon.GetMoonPhaseTexture(lastPhaseTextureIndex);
     }
 
     [HideFromIl2Cpp]
@@ -93,7 +93,7 @@ internal sealed class UpdateMoon : MonoBehaviour
 		Texture2D[] result = new Texture2D[24];
 		for (int i = 0; i < result.Length; i++)
 		{
-			result[i] = Implementation.GetMoonPhaseTexture(i);
+			result[i] = BetterNightSkyMelon.GetMoonPhaseTexture(i);
 		}
 
 		return result;

@@ -27,11 +27,25 @@
 	<!--This is the of packages that the mod references.-->
 	<ItemGroup>
 		<!--This package contains almost everything a person could possibly need to reference while modding.-->
-		<PackageReference Include="STBlade.Modding.TLD.Il2CppAssemblies.Windows" Version="2.40.0" />
+		<PackageReference Include="STBlade.Modding.TLD.Il2CppAssemblies.Windows" Version="2.51.0" />
 		<PackageReference Include="STBlade.Modding.TLD.ModSettings" Version="1.9.0" />
 		<!--The package version here in this template may be outdated and need to be updated. Visual Studio can update package versions automatically.-->
 		<!--If the mod references any other mods (such as ModSettings), that NuGet package will also need to be listed here.-->
 	</ItemGroup>
+
+	<PropertyGroup>
+		<!-- This should point to wherever your games primary EXE is -->
+		<TheLongDarkPath>/home/marcy/.local/share/Steam/steamapps/common/TheLongDark</TheLongDarkPath>
+		<ReleaseFolderPath>/home/marcy/Documents/TLD Stuff/TLDMod/Release</ReleaseFolderPath>
+	</PropertyGroup>
+
+	<!-- This is a build event. It will copy your dll to the currently defined TheLongDarkPath's Mods folder -->
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<!-- This copies the mods files to the games mod dir -->
+		<Copy SourceFiles="$(TargetPath)" DestinationFolder="$(TheLongDarkPath)/Mods" />
+		<!-- This copies the mods files to a designated release folder. Speeds up finding the dll after a build -->
+		<Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ReleaseFolderPath)" />
+	</Target>
 
 	<ItemGroup>
 		<EmbeddedResource Include="res\better-night-sky" />

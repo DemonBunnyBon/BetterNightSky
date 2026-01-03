@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Activcom\\Desktop\\Better-Night-Sky-master\\VisualStudio\\Better-Night-Sky.csproj": {}
+    "/home/marcy/Documents/TLD Stuff/TLDMod/VisualStudio/BetterNightSky-main/VisualStudio/Better-Night-Sky.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Activcom\\Desktop\\Better-Night-Sky-master\\VisualStudio\\Better-Night-Sky.csproj": {
+    "/home/marcy/Documents/TLD Stuff/TLDMod/VisualStudio/BetterNightSky-main/VisualStudio/Better-Night-Sky.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Activcom\\Desktop\\Better-Night-Sky-master\\VisualStudio\\Better-Night-Sky.csproj",
+        "projectUniqueName": "/home/marcy/Documents/TLD Stuff/TLDMod/VisualStudio/BetterNightSky-main/VisualStudio/Better-Night-Sky.csproj",
         "projectName": "Better-Night-Sky",
-        "projectPath": "C:\\Users\\Activcom\\Desktop\\Better-Night-Sky-master\\VisualStudio\\Better-Night-Sky.csproj",
-        "packagesPath": "C:\\Users\\Activcom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Activcom\\Desktop\\Better-Night-Sky-master\\VisualStudio\\obj\\",
+        "projectPath": "/home/marcy/Documents/TLD Stuff/TLDMod/VisualStudio/BetterNightSky-main/VisualStudio/Better-Night-Sky.csproj",
+        "packagesPath": "/home/marcy/.nuget/packages/",
+        "outputPath": "/home/marcy/Documents/TLD Stuff/TLDMod/VisualStudio/BetterNightSky-main/VisualStudio/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Activcom\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/marcy/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,7 +32,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net6.0": {
@@ -42,7 +46,7 @@
           "dependencies": {
             "STBlade.Modding.TLD.Il2CppAssemblies.Windows": {
               "target": "Package",
-              "version": "[2.40.0, )"
+              "version": "[2.51.0, )"
             },
             "STBlade.Modding.TLD.ModSettings": {
               "target": "Package",
@@ -63,15 +67,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
+              "version": "[6.0.36, 6.0.36]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
+              "version": "[6.0.36, 6.0.36]"
             }
           ],
           "frameworkReferences": {
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/marcy/.dotnet/sdk/10.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }

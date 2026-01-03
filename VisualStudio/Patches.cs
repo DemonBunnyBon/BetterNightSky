@@ -5,60 +5,52 @@ using HarmonyLib;
 namespace BetterNightSky;
 
 [HarmonyPatch(typeof(TODStateData), nameof(TODStateData.SetBlended))]
-internal static class TODStateConfic_SetBlended
+internal static class BloomPatch
 {
     public static void Postfix(TODStateData __instance, int nightStates)
     {
         if (nightStates > 0)
         {
-            //__instance.m_SkyBloomIntensity *= 0.3f;
             __instance.m_BloomIntensity *= 0.3f;
         }
     }
 }
 
 [HarmonyPatch(typeof(UniStormWeatherSystem), nameof(UniStormWeatherSystem.Init))]
-internal static class UniStormWeatherSystem_Init
+internal static class WeatherInitPatch
 {
     public static void Prefix()
     {
-        Implementation.Log("Init");
-        Implementation.Install();
+        BetterNightSkyMelon.Install();
     }
 }
 
 [HarmonyPatch(typeof(UniStormWeatherSystem), nameof(UniStormWeatherSystem.SetMoonPhaseIndex))]
-internal static class UniStormWeatherSystem_SetMoonPhaseIndex
+internal static class MoonPhaseIndexPatch
 {
     public static void Postfix()
     {
-        Implementation.Log("SetMoonPhaseIndex");
-        Implementation.UpdateMoonPhase();
+        BetterNightSkyMelon.UpdateMoonPhase();
     }
 }
 
 [HarmonyPatch(typeof(UniStormWeatherSystem), nameof(UniStormWeatherSystem.SetMoonPhase))]
-internal static class UniStormWeatherSystem_SetMoonPhase
+internal static class MoonPhasePatch
 {
     public static void Postfix()
     {
-        Implementation.UpdateMoonPhase();
+        BetterNightSkyMelon.UpdateMoonPhase();
     }
 }
 
 [HarmonyPatch(typeof(GameManager), nameof(GameManager.Awake))]
-internal static class GameManager_Awake
+internal static class ShootingStarsSchedulerPatch
 {
-    private static bool wasMainMenu = false;
-
     public static void Postfix()
     {
-        bool isMainMenu = UpdateShootingStar.IsMainMenu();
-
-        if (wasMainMenu != isMainMenu)
+        if(!Utilities.IsMenu())
         {
-            Implementation.RescheduleShootingStars();
-            wasMainMenu = isMainMenu;
+            BetterNightSkyMelon.RescheduleShootingStars();
         }
     }
 }
