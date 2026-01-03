@@ -1,4 +1,4 @@
-# Better-Night-Sky
+# Better Night Sky
 
 This is a mod for The Long Dark that replaces the Moon and Stars with a more detailed representation.
 
