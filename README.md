@@ -2,7 +2,7 @@
 
 This is a mod for The Long Dark that replaces the Moon and Stars with a more detailed representation.
 
-![NightSky](https://raw.githubusercontent.com/DemonBunnyBon/BetterNightSky/refs/heads/main/Images/night-sky.jpg)
+![NightSky](https://raw.githubusercontent.com/DemonBunnyBon/ModListJson/refs/heads/main/THUMB_BNS.jpg)
 
 Features: 
 - The mod completely overhauls the night sky sphere with new textures giving the moon, stars and the abyss itself a new look.
